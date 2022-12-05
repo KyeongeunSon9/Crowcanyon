@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
+    <title>크로우캐년 CROWCANYON</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
+
 <body>
 
     <header>
         <nav id="gb-nav-bar">
-            <div class="header-nav">MENU
+
+            <!-- 피그마에 만들어둔 모양으로 하려면 수정해야하나요 -->
+            <div class="header-nav nav-hover">MENU
                 <ul>
                     <li class="main-menu">ABOUT
                         <ul class="list-hide">
@@ -49,11 +53,22 @@
                     <li class="main-menu">WHOLESALE</li>
                 </ul>
             </div>
-            <div class="header-nav">SEARCH</div>
-            <div class="header-logo">
-                <figure class="header-logo-img"></figure>
+
+            <!-- SEARCH 클릭했을때 검색할 수 있는 입력 창
+            이 부분 어떻게 만들어요? -->
+            <!-- 폼태그 action에 뭐 적어야해요? 비워둬서 검사기에 에러나왔어요 -->
+            <div class="header-nav nav-hover">SEARCH
+                <form action="">
+                    <input type="search">검색어를 입력 후 엔터를 누르세요.
+                </form>
             </div>
-            <div class="header-nav">ACCOUNT
+
+            <div class="header-nav header-logo">
+                <figure>
+                    <img class="header-logo-img" src="img/header-logo.png" alt="header-logo">
+                </figure>
+            </div>
+            <div class="header-nav nav-hover">ACCOUNT
                 <ul class="account-list">
                     <li><a href="#">LOGIN</a></li>
                     <li><a href="#">CART</a></li>
@@ -61,85 +76,114 @@
                     <li><a href="#">MY PAGE</a></li>
                 </ul>
             </div>
-            <div class="header-nav">CART</div>
+            <div class="header-nav nav-hover">CART</div>
         </nav>
-        <div id="cr-typograpy-wrapper">
+        <div class="cr-typograpy-wrapper">
             <h1 class="cr-typography">CROWCANYON</h1>
         </div>
     </header>
 
 
-    <section id="intro-section">
-        <div class="text-content">
-            <p>진정한 클래식 아메리칸 에나멜 웨어, 크로우 캐년.</p>
-            <h2 class="content-title">CROWCANYON</h2>
-            <p>
-                크로우캐년홈은 모든 가정과 개인을 위한 미국의 클래식 에나멜 웨어 브랜드 입니다.<br>
-                전 세계적으로 유리나 플라스틱 등 깨지기 쉬운 소재나 환경에 안 좋은 소재가 사용되는 것을 우려하여 오래 쓸 수 있으며 청결하고, 디자인까지 멋진 제품을 생각하며 만들어졌습니다.<br>
-                법랑이라는 클래식한 소재를 가지고 마블 패턴을 입힌 모던한 디자인이 특징입니다. 마블/클래식/스틴슨 등 다양한 라인으로 나뉘어 전개되고 있습니다.
-            </p>
-            <button class="link-bt">
-                <a href="#">STORY</a>
-                <span class="link-arrow-icon"></span>
-            </button>
+    <!-- 섹션에 아이디랑 클래스 둘 다 줘도 돼요?
+    겹치는 css는 묶어주려고 클래스로 frame 줬어요 -->
+    <section id="intro-section" class="frame">
+        <div class="text-content-wrapper left-spacing">
+            <!-- left-spacing 클래스 줬는데 여백 어떻게 만들어요??? -->
+            <div class="text-content">
+                <p>진정한 클래식 아메리칸 에나멜 웨어, 크로우 캐년.</p>
+                <h2 class="content-title">CROWCANYON</h2>
+                <p>
+                    크로우캐년홈은 모든 가정과 개인을 위한 미국의 클래식 에나멜 웨어 브랜드 입니다.<br>
+                    전 세계적으로 유리나 플라스틱 등 깨지기 쉬운 소재나 환경에 안 좋은 소재가 사용되는 것을 우려하여 오래 쓸 수 있으며 청결하고, 디자인까지 멋진 제품을 생각하며 만들어졌습니다.<br>
+                    법랑이라는 클래식한 소재를 가지고 마블 패턴을 입힌 모던한 디자인이 특징입니다. 마블/클래식/스틴슨 등 다양한 라인으로 나뉘어 전개되고 있습니다.
+                </p>
+                <a href="#" class="link-bt">
+                    <p>STORY</p>
+                    <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
+                    </svg>
+                </a>
+            </div>
         </div>
         <div class="img-contents">
             <figure class="story-img"></figure>
         </div>
     </section>
 
-    <section id="membership-section">
+
+    <section id="membership-section" class="frame">
         <div class="img-contents">
             <figure class="membership-img"></figure>
         </div>
-        <div class="text-content">
-            <h2 class="content-title">RENEWAL MEMBERSHIP</h2>
-            <p>
-                크로우캐년 멤버십 제도가 새로운 등급과 혜택들로 개편되었습니다.
-            </p>
-            <button class="link-bt">
-                <a href="#">MEMBERSHIP</a>
-                <span class="link-arrow-icon"></span>
-            </button>
+        <div class="text-content-wrapper right-spacing">
+            <div class="text-content">
+                <h2 class="content-title">RENEWAL MEMBERSHIP</h2>
+                <p>
+                    크로우캐년 멤버십 제도가 새로운 등급과 혜택들로 개편되었습니다.
+                </p>
+                <a href="#" class="link-bt">
+                    <p>MEMBERSHIP</p>
+                    <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="home-styling-section">
-        <div class="home-styling-wrapper-left">
-            <div class="text-content">
-                <h2 class="content-title">HOME STYLING</h2>
-                <p>
-                    나만의 무드가 담긴 홈 스타일링
-                </p>
-                <button class="link-bt">
-                    <a href="#">MORE VIEW</a>
-                    <span class="link-arrow-icon"></span>
-                </button>
+
+    <section id="home-styling-section" class="frame">
+        <div class="home-styling-wrapper-left left-spacing">
+            <div class="text-content-wrapper">
+                <div class="text-content">
+                    <h2 class="content-title">HOME STYLING</h2>
+                    <p>
+                        나만의 무드가 담긴 홈 스타일링
+                    </p>
+                    <a href="#" class="link-bt">
+                        <p>MORE VIEW</p>
+                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="home-styling-img-box-1">
-                <figure class="home-styling-img-1"></figure>
+            <div class="home-styling-img-box right-spacing">
+                <figure class="home-styling-img hs-img-1"></figure>
             </div>
         </div>
         <div class="home-styling-wrapper-right">
-            <div class="home-styling-img-box-2">
-                <figure class="home-styling-img-2"></figure>
-            </div>
-            <div class="home-styling-img-box-3">
-                <figure class="home-styling-img-3"></figure>
-            </div>
+            <figure class="home-styling-img hs-img-2 right-spacing"></figure>
+            <figure class="home-styling-img hs-img-3"></figure>
         </div>
-        <!-- 위에 figure에 백그라운드 이미지로 넣을거면 div로 감쌀 필요 없나요? -->
     </section>
 
-    <section id="slide-banner-section">
+
+    <section id="slide-banner-section" class="top-spacing">
+
+        <!-- 전체를 감싸는 구조 -->
         <div class="slide-wrapper">
+
+            <!-- overflow : hidden 적용 모니터처럼 쓸 프레임 -->
             <div class="slide-viewport">
-                    <div class="slide-inner">
-                    <figure></figure>
-                    <figure></figure>
-                    <figure></figure>
-                    <figure></figure>
-                </div>
+
+                    <!-- 슬라이드의 묶음 -->
+                    <ul class="slide-inner">
+                        
+                        <!-- 각 슬라이드 컨텐츠들 -->
+                        <li>
+                            <figure></figure>
+                        </li>
+                        <li>
+                            <figure></figure>
+                        </li>
+                        <li>
+                            <figure></figure>
+                        </li>
+                        <li>
+                            <figure></figure>
+                        </li>
+                    </ul>
             </div>
             <div class="slide-radio">
                 <button class="radio-bt"></button>
@@ -149,26 +193,72 @@
             </div>
         </div>
     </section>
-    <!-- 슬라이드 배너 뷰포트가 wrpper 안에 있는거 맞나요? 코드 어떻게 작성해야할지 모르겠어요ㅠㅠ -->
 
-    <section id="new-pd-section">
+
+    <section id="new-pd-section" class="pd-frame">
         <div class="category">
             <h3 class="category-title">NEW PRODUCT</h3>
-            <a class="more-bt" href="#"></a>
+            <a class="more-bt" href="#">
+                <svg width="49" height="14" viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13H47L28.372 1" stroke="black"/>
+                    </svg>                    
+            </a>
         </div>
-        <div class="new-pd-content-wrapper">
+        <div class="pd-content-wrapper">
             <ul>
-                <li class="new-pd-content">
+                <li class="pd-content">
                     <a href="#">
-                        <figure class=""></figure>
-                        <h4 class="pd-name">상품명</h3>
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
                         <span class="pd-price">가격</span>
                     </a>
                 </li>
-                <li class="new-pd-content">
+                <li class="pd-content">
                     <a href="#">
-                        <figure class=""></figure>
-                        <h4 class="pd-name">상품명</h3>
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
                         <span class="pd-price">가격</span>
                     </a>
                 </li>
@@ -177,24 +267,42 @@
 
     </section>
 
-    <section id="goods-section">
+    <section id="goods-section" class="pd-frame">
         <div class="category">
             <h3 class="category-title">GOODS</h3>
-            <a class="more-bt" href="#"></a>
+            <a class="more-bt" href="#">
+                <svg width="49" height="14" viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13H47L28.372 1" stroke="black"/>
+                </svg>
+            </a>
         </div>
-        <div class="goods-content-wrapper">
+        <div class="pd-content-wrapper">
             <ul>
-                <li class="goods-content">
+                <li class="pd-content">
                     <a href="#">
-                        <figure class=""></figure>
-                        <h4 class="pd-name">상품명</h3>
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
                         <span class="pd-price">가격</span>
                     </a>
                 </li>
-                <li class="goods-content">
+                <li class="pd-content">
                     <a href="#">
-                        <figure class=""></figure>
-                        <h4 class="pd-name">상품명</h3>
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
+                        <span class="pd-price">가격</span>
+                    </a>
+                </li>
+                <li class="pd-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h4 class="pd-name">상품명</h4>
                         <span class="pd-price">가격</span>
                     </a>
                 </li>
@@ -202,14 +310,33 @@
         </div>
     </section>
 
-    <section id="care-section">
+    <section id="care-section" class="pd-frame">
         <div class="category">
             <h3 class="category-title">CARE AND USE</h3>
-            <a class="more-bt" href="#"></a>
+            <a class="more-bt" href="#">
+                <svg width="49" height="14" viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13H47L28.372 1" stroke="black"/>
+                </svg>
+            </a>
         </div>
         <div class="care-content-wrapper">
             <ul>
-                <li>
+                <li class="care-content">
+                    <figure></figure>
+                </li>
+                <li class="care-content">
+                    <figure></figure>
+                </li>
+                <li class="care-content">
+                    <figure></figure>
+                </li>
+                <li class="care-content">
+                    <figure></figure>
+                </li>
+                <li class="care-content">
+                    <figure></figure>
+                </li>
+                <li class="care-content">
                     <figure></figure>
                 </li>
             </ul>
@@ -217,5 +344,110 @@
     </section>
 
     
+    <section id="magazine-section" class="pd-frame">
+        <div class="category">
+            <h3 class="category-title">MAGAZINE</h3>
+            <a class="more-bt" href="#">
+                <svg width="49" height="14" viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13H47L28.372 1" stroke="black"/>
+                </svg>
+            </a>
+        </div>
+        <div class="magazine-content-wrapper">
+            <ul>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h5 class="promotion-title">프로모션 타이틀</h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h5 class="promotion-title"></h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h5 class="promotion-title"></h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h5 class="promotion-title"></h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h5 class="promotion-title"></h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure></figure>
+                        <h5 class="promotion-title"></h5>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="video-section" class="pd-frame">
+        <div class="category">
+            <h3 class="category-title">CONTENTS</h3>
+            <a class="more-bt" href="#">
+                <svg width="49" height="14" viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13H47L28.372 1" stroke="black"/>
+                </svg>
+            </a>
+        </div>
+        <div class="video-wrapper">
+            <div class="video-content">
+                <video src=""></video>
+            </div>
+            <div class="video-content">
+                <video src=""></video>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <nav id="footer-nav">
+            <ul>
+                <li class="info-link">
+                    <a href="#">GUIDE</a>
+                </li>
+                <li class="info-link">
+                    <a href="#">PRIVACY</a>
+                </li>
+                <li class="info-link">
+                    <a href="#">AGREEMENT</a>
+                </li>
+                <li class="info-link">
+                    <a href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="company-info">
+            <span>스코프컴퍼니 주식회사 설혜윤</span>
+            <span>ADRESS : [04006] 서울특별시 마포구 희우정로21길 9 (망원동) 1층</span>
+            <span>CS 고객센터 운영시간 MON - FRI 13:00 - 18:00</span>
+            <span>TEL : <a href="tel:02-336-5288">02-336-5288</a></span>
+            <span>C.P.O : 전설아(<a href="mailto:info@scopeseoul.kr">info@scopeseoul.kr</a>)</span>
+            <span>License : [347-81-01800]</span>
+            <span>Online License : [2020-서울마포-2782]</span>
+            <span><a href="#">사업자정보확인</a></span>
+            <span>신한은행 100-035-137650</span>
+            <span>예금주 : 스코프컴퍼니(주)</span>
+        </div>
+    </footer>
+
+
+    <button class="scroll-bt"></button>
 </body>
 </html>
