@@ -98,7 +98,6 @@
 .left-spacing {
 
 }
-/* 여백 클래스로 만들어줬는데 어떻게 해야해요?ㅜㅜ */
 
 .text-content p {
     font-size: var(--font-size-14);
@@ -211,7 +210,8 @@
     border-top: 0;
     border-left: 0;
 }
-/* 여기 4칸씩 들어가야하는데 이상해요 */
+/* 여기 4칸씩 들어가야하는데 이상해요
+박스사이징 보더 했는데 1280 딱 안 맞음..  */
 
 .pd-name {
     font-weight: 900;
