@@ -66,6 +66,7 @@ header {
     font-size: var(--font-size-20);
     overflow: hidden;
     display: none;
+    transition: 0.7s;
 }
 
 .header-logo {
@@ -80,13 +81,26 @@ header {
 }
 
 .account-list {
+    display: none;
+}
+
+.account-list a {
     width: 220px;
     height: 50px;
     background-color: var(--background-color);
     border: var(--border);
     color: var(--main-color-black);
     font-size: var(--font-size-20);
-    display: none;
+    transition: 0.7s;
+}
+
+.account-list a:hover, .main-menu:hover {
+    background-color: var(--main-color-black);
+    color: var(--font-color-white);
+}
+
+.main-menu:active .list-hide {
+    overflow: visible;
 }
 
 .cr-typograpy-wrapper {
