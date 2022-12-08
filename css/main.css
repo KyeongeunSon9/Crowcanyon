@@ -553,3 +553,12 @@ footer {
     bottom: 30px;
     right: 30px;
 }
+
+
+@media screen and (max-width: 834px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+}
