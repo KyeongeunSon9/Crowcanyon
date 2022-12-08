@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>크로우캐년 CROWCANYON</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
     <header>
         <nav id="gb-nav-bar">
-
-            <!-- 피그마에 만들어둔 모양으로 하려면 수정해야하나요 -->
             <div class="header-nav nav-hover">MENU
                 <ul>
                     <li class="main-menu">ABOUT
@@ -54,11 +52,8 @@
                 </ul>
             </div>
 
-            <!-- SEARCH 클릭했을때 검색할 수 있는 입력 창
-            이 부분 어떻게 만들어요? -->
-            <!-- 폼태그 action에 뭐 적어야해요? 비워둬서 검사기에 에러나왔어요 -->
             <div class="header-nav nav-hover">SEARCH
-                <form action="">
+                <form id="search" action="#">
                     <input type="search">검색어를 입력 후 엔터를 누르세요.
                 </form>
             </div>
@@ -84,11 +79,8 @@
     </header>
 
 
-    <!-- 섹션에 아이디랑 클래스 둘 다 줘도 돼요?
-    겹치는 css는 묶어주려고 클래스로 frame 줬어요 -->
     <section id="intro-section" class="frame">
         <div class="text-content-wrapper left-spacing">
-            <!-- left-spacing 클래스 줬는데 여백 어떻게 만들어요??? -->
             <div class="text-content">
                 <p>진정한 클래식 아메리칸 에나멜 웨어, 크로우 캐년.</p>
                 <h2 class="content-title">CROWCANYON</h2>
@@ -98,16 +90,15 @@
                     법랑이라는 클래식한 소재를 가지고 마블 패턴을 입힌 모던한 디자인이 특징입니다. 마블/클래식/스틴슨 등 다양한 라인으로 나뉘어 전개되고 있습니다.
                 </p>
                 <a href="#" class="link-bt">
-                    <p>STORY</p>
+                    <span>STORY</span>
                     <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
+                        <path class="hover-fill" d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
                     </svg>
                 </a>
             </div>
         </div>
         <div class="img-contents">
             <figure class="story-img"></figure>
-            <!-- figure 백그라운드에 이미지가 안 들어가져요 -->
         </div>
     </section>
 
@@ -123,9 +114,9 @@
                     크로우캐년 멤버십 제도가 새로운 등급과 혜택들로 개편되었습니다.
                 </p>
                 <a href="#" class="link-bt">
-                    <p>MEMBERSHIP</p>
+                    <span>MEMBERSHIP</span>
                     <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
+                        <path class="hover-fill" d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
                     </svg>
                 </a>
             </div>
@@ -134,7 +125,7 @@
 
 
     <section id="home-styling-section" class="frame">
-        <div class="home-styling-wrapper-left left-spacing">
+        <div class="home-styling-wrapper-left">
             <div class="text-content-wrapper">
                 <div class="text-content">
                     <h2 class="content-title">HOME STYLING</h2>
@@ -142,19 +133,19 @@
                         나만의 무드가 담긴 홈 스타일링
                     </p>
                     <a href="#" class="link-bt">
-                        <p>MORE VIEW</p>
+                        <span>MORE VIEW</span>
                         <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
+                            <path class="hover-fill" d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5L20 4.5V3.5L0 3.5L0 4.5Z" fill="#222222"/>
                         </svg>
                     </a>
                 </div>
             </div>
-            <div class="home-styling-img-box right-spacing">
+            <div class="home-styling-img-box add-spacing">
                 <figure class="home-styling-img hs-img-1"></figure>
             </div>
         </div>
         <div class="home-styling-wrapper-right">
-            <figure class="home-styling-img hs-img-2 right-spacing"></figure>
+            <figure class="home-styling-img hs-img-2"></figure>
             <figure class="home-styling-img hs-img-3"></figure>
         </div>
     </section>
@@ -173,16 +164,16 @@
                         
                         <!-- 각 슬라이드 컨텐츠들 -->
                         <li>
-                            <figure></figure>
+                            <figure class="slide slide-img-1"></figure>
                         </li>
                         <li>
-                            <figure></figure>
+                            <figure class="slide slide-img-2"></figure>
                         </li>
                         <li>
-                            <figure></figure>
+                            <figure class="slide slide-img-3"></figure>
                         </li>
                         <li>
-                            <figure></figure>
+                            <figure class="slide slide-img-3"></figure>
                         </li>
                     </ul>
             </div>
@@ -209,58 +200,90 @@
             <ul>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/2a32934240ab2b9312ed995e80ddf439.png" alt="홀리데이팩">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">[HOLIDAY] 홀리데이 팩</h4>
+                            <span class="pd-price">￦69,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/62d5786859dee416df0ab8eaeb130df0 복사.png" alt="홀리데이_시리얼세트">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">[HOLIDAY] 비기너 세트 (머그+플레이트)</h4>
+                            <span class="pd-price">￦30,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/6ff8604913fe171515507f8a3dce4262 복사.png" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">[HOLIDAY] 시리얼 세트 (시리얼보울 + 스몰스푼)</h4>
+                            <span class="pd-price">￦30,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/fca8a4a80992ce24e84a357ef18852a3 복사.png" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">[HOLIDAY] D99 플랫플레이트 4P 세트</h4>
+                            <span class="pd-price">￦80,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/95bc9952038f181a7c043a940d985a24 (1) 복사.png" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">D18 샐러드보울 옐로우마블</h4>
+                            <span class="pd-price">￦25,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/b65d7c12d177f51df310c221dbb23910 (1) 복사.png" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">D18 샐러드보울 터키마블</h4>
+                            <span class="pd-price">￦25,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/b78f322569a82db93e2f991ce19e17e6 (1) 복사.png" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">D114 파스타플레이트 그레이마블</h4>
+                            <span class="pd-price">￦28,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/fb3310d3001a1b573c09a9f54760e4b8 (1) 복사.png" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">D20 디너플레이트 옐로우마블</h4>
+                            <span class="pd-price">￦25,000</span>
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -281,30 +304,46 @@
             <ul>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/b8542dac6328a1689d00edd2a2f39d7e.jpg" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">쿠션 커버</h4>
+                            <span class="pd-price">￦25,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/5d01b42a0baba01ab13738e58698c6b9.jpg" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">카인드백 핑크마블</h4>
+                            <span class="pd-price">￦18,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/a4665587ed4d32aa381e33eb3aabc179.jpg" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">크로우캐년홈 핸드폰케이스 민트마블</h4>
+                            <span class="pd-price">￦24,000</span>
+                        </div>
                     </a>
                 </li>
                 <li class="pd-content">
                     <a href="#">
-                        <figure></figure>
-                        <h4 class="pd-name">상품명</h4>
-                        <span class="pd-price">가격</span>
+                        <figure>
+                            <img src="img/aeb30be9d9d140859c675792350c518e.jpg" alt="">
+                        </figure>
+                        <div class="pd-info">
+                            <h4 class="pd-name">크로우캐년홈 에어팟케이스 터키마블</h4>
+                            <span class="pd-price">￦19,000</span>
+                        </div>
                     </a>
                 </li>
             </ul>
@@ -358,38 +397,50 @@
             <ul>
                 <li class="magazine-content">
                     <a href="#">
-                        <figure></figure>
-                        <h5 class="promotion-title">프로모션 타이틀</h5>
+                        <figure>
+                            <img src="img/0444428a189a3e9e9001b7985cbc8e68.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">Happy Holiday</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
                     <a href="#">
-                        <figure></figure>
-                        <h5 class="promotion-title"></h5>
+                        <figure>
+                            <img src="img/7fe267a576314af29683fb4d4c76084a.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">1차 신제품 출시 안내</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
                     <a href="#">
-                        <figure></figure>
-                        <h5 class="promotion-title"></h5>
+                        <figure>
+                            <img src="img/EAB980EC9888EBA6BC2.jpeg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">11월 BEST REVIEW</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
                     <a href="#">
-                        <figure></figure>
-                        <h5 class="promotion-title"></h5>
+                        <figure>
+                            <img src="img/FEED20320BF20CCH.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">BLACK FOURDAYS</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
                     <a href="#">
-                        <figure></figure>
-                        <h5 class="promotion-title"></h5>
+                        <figure>
+                            <img src="img/KakaoTalk_20221111_132902906_01.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">망원 쇼룸 홀리데이기념 이벤트</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
                     <a href="#">
-                        <figure></figure>
-                        <h5 class="promotion-title"></h5>
+                        <figure>
+                            <img src="img/296317239_165924805965326_8982061920604916662_n.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">크로우캐년 제주 팝업스토어</h5>
                     </a>
                 </li>
             </ul>
@@ -400,7 +451,7 @@
     <section id="video-section" class="pd-frame">
         <div class="category">
             <h3 class="category-title">CONTENTS</h3>
-            <a class="more-bt" href="#">
+            <a class="more-bt" href="https://www.youtube.com/@user-or2ls8og4q">
                 <svg width="49" height="14" viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 13H47L28.372 1" stroke="black"/>
                 </svg>
@@ -408,10 +459,12 @@
         </div>
         <div class="video-wrapper">
             <div class="video-content">
-                <video src=""></video>
+                <video src="video/Camping Food With CrowCanyon.mp4" controls></video>
+                <!-- <iframe width="1278" height="649" src="https://www.youtube.com/embed/PMwAluxj92c" title="Camping Food With CrowCanyon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
             <div class="video-content">
-                <video src=""></video>
+                <video src="video/[EP.3 CCH table] 크로우캐년홈의 제품들이 인테리어 화분으로 변신! 심녹과 함께 했어요..mp4" controls></video>
+                <!-- <iframe width="1278" height="649" src="https://www.youtube.com/embed/Aner3XL73ME" title="[EP.3 CCH table] 크로우캐년홈의 제품들이 인테리어 화분으로 변신! 심녹과 함께 했어요." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
         </div>
     </section>
@@ -446,9 +499,38 @@
             <span>신한은행 100-035-137650</span>
             <span>예금주 : 스코프컴퍼니(주)</span>
         </div>
+        <ul class="sns-icons">
+            <li>
+                <a class="facebook-icon icon-hover" href="https://www.facebook.com/">
+                    <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.063 4.31603H13.507V0.182039C12.3237 0.05899 11.1347 -0.00176056 9.94498 3.88233e-05C6.40899 3.88233e-05 3.99099 2.15804 3.99099 6.11003V9.51602H0V14.144H3.99099V26H8.77499V14.144H12.753L13.351 9.51602H8.77499V6.56503C8.77499 5.20003 9.13899 4.31603 11.063 4.31603Z" fill="black"/>
+                    </svg>                        
+                </a>
+            </li>
+            <li>
+                <a class="instagram-icon icon-hover" href="https://www.instagram.com/crowcanyon_co_kr/">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 7.28C12.6709 7.28 11.3717 7.67412 10.2666 8.41252C9.16147 9.15093 8.30015 10.2004 7.79153 11.4284C7.28291 12.6563 7.14983 14.0075 7.40912 15.311C7.66842 16.6146 8.30843 17.8119 9.24824 18.7518C10.1881 19.6916 11.3854 20.3316 12.689 20.5909C13.9925 20.8502 15.3437 20.7171 16.5716 20.2085C17.7996 19.6999 18.8491 18.8385 19.5875 17.7334C20.3259 16.6283 20.72 15.3291 20.72 14C20.72 12.2177 20.012 10.5085 18.7518 9.24824C17.4915 7.988 15.7823 7.28 14 7.28ZM14 18.48C13.1139 18.48 12.2478 18.2173 11.511 17.725C10.7743 17.2327 10.2001 16.533 9.86102 15.7144C9.52194 14.8958 9.43322 13.995 9.60608 13.126C9.77894 12.257 10.2056 11.4587 10.8322 10.8322C11.4587 10.2056 12.257 9.77894 13.126 9.60608C13.995 9.43322 14.8958 9.52194 15.7144 9.86102C16.533 10.2001 17.2327 10.7743 17.725 11.511C18.2173 12.2478 18.48 13.1139 18.48 14C18.4763 15.187 18.0031 16.3244 17.1638 17.1638C16.3244 18.0031 15.187 18.4763 14 18.48ZM20.16 0H7.84C5.7607 0 3.76657 0.825998 2.29628 2.29628C0.825998 3.76657 0 5.7607 0 7.84V20.16C0 22.2393 0.825998 24.2334 2.29628 25.7037C3.76657 27.174 5.7607 28 7.84 28H20.16C22.2393 28 24.2334 27.174 25.7037 25.7037C27.174 24.2334 28 22.2393 28 20.16V7.84C28 5.7607 27.174 3.76657 25.7037 2.29628C24.2334 0.825998 22.2393 0 20.16 0V0ZM25.76 20.16C25.76 20.8954 25.6152 21.6236 25.3337 22.303C25.0523 22.9825 24.6398 23.5998 24.1198 24.1198C23.5998 24.6398 22.9825 25.0523 22.303 25.3337C21.6236 25.6152 20.8954 25.76 20.16 25.76H7.84C7.1046 25.76 6.3764 25.6152 5.69697 25.3337C5.01755 25.0523 4.40021 24.6398 3.8802 24.1198C3.36019 23.5998 2.9477 22.9825 2.66627 22.303C2.38485 21.6236 2.24 20.8954 2.24 20.16V7.84C2.24 6.35479 2.83 4.93041 3.8802 3.8802C4.93041 2.83 6.35479 2.24 7.84 2.24H20.16C20.8954 2.24 21.6236 2.38485 22.303 2.66627C22.9825 2.9477 23.5998 3.36019 24.1198 3.8802C24.6398 4.40021 25.0523 5.01755 25.3337 5.69697C25.6152 6.3764 25.76 7.1046 25.76 7.84V20.16ZM22.96 6.72C22.96 7.05227 22.8615 7.37708 22.6769 7.65336C22.4923 7.92963 22.2299 8.14496 21.9229 8.27212C21.6159 8.39927 21.2781 8.43254 20.9522 8.36772C20.6264 8.3029 20.327 8.14289 20.0921 7.90794C19.8571 7.67299 19.6971 7.37364 19.6323 7.04775C19.5675 6.72186 19.6007 6.38407 19.7279 6.07709C19.855 5.77011 20.0704 5.50773 20.3466 5.32313C20.6229 5.13853 20.9477 5.04 21.28 5.04C21.7256 5.04 22.1529 5.217 22.4679 5.53206C22.783 5.84712 22.96 6.27444 22.96 6.72Z" fill="black"/>
+                    </svg>                      
+                </a>
+            </li>
+            <li>
+                <a class="youtube-icon icon-hover" href="https://www.youtube.com/@user-or2ls8og4q">
+                    <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1719 19.4375V22.7344C15.1719 23.4323 14.9688 23.7812 14.5625 23.7812C14.3229 23.7812 14.0885 23.6667 13.8594 23.4375V18.7344C14.0885 18.5052 14.3229 18.3906 14.5625 18.3906C14.9688 18.3906 15.1719 18.7396 15.1719 19.4375ZM20.4531 19.4531V20.1719H19.0469V19.4531C19.0469 18.7448 19.2812 18.3906 19.75 18.3906C20.2188 18.3906 20.4531 18.7448 20.4531 19.4531ZM5.35938 16.0469H7.03125V14.5781H2.15625V16.0469H3.79688V24.9375H5.35938V16.0469ZM9.85938 24.9375H11.25V17.2188H9.85938V23.125C9.54688 23.5625 9.25 23.7812 8.96875 23.7812C8.78125 23.7812 8.67188 23.6719 8.64062 23.4531C8.63021 23.4219 8.625 23.2396 8.625 22.9062V17.2188H7.23438V23.3281C7.23438 23.8385 7.27604 24.2188 7.35938 24.4688C7.48438 24.8542 7.78646 25.0469 8.26562 25.0469C8.76562 25.0469 9.29688 24.7292 9.85938 24.0938V24.9375ZM16.5625 22.625V19.5469C16.5625 18.7865 16.5156 18.2708 16.4219 18C16.2448 17.4167 15.875 17.125 15.3125 17.125C14.7917 17.125 14.3073 17.4062 13.8594 17.9688V14.5781H12.4688V24.9375H13.8594V24.1875C14.3281 24.7604 14.8125 25.0469 15.3125 25.0469C15.875 25.0469 16.2448 24.7604 16.4219 24.1875C16.5156 23.9062 16.5625 23.3854 16.5625 22.625ZM21.8438 22.4688V22.2656H20.4219C20.4219 22.7969 20.4115 23.1146 20.3906 23.2188C20.3177 23.5938 20.1094 23.7812 19.7656 23.7812C19.2865 23.7812 19.0469 23.4219 19.0469 22.7031V21.3438H21.8438V19.7344C21.8438 18.9115 21.7031 18.3073 21.4219 17.9219C21.0156 17.3906 20.4635 17.125 19.7656 17.125C19.0573 17.125 18.5 17.3906 18.0938 17.9219C17.8021 18.3073 17.6562 18.9115 17.6562 19.7344V22.4375C17.6562 23.2604 17.8073 23.8646 18.1094 24.25C18.5156 24.7812 19.0781 25.0469 19.7969 25.0469C20.5469 25.0469 21.1094 24.7708 21.4844 24.2188C21.6719 23.9375 21.7812 23.6562 21.8125 23.375C21.8333 23.2812 21.8438 22.9792 21.8438 22.4688ZM12.3438 8.20312V4.92188C12.3438 4.20312 12.1198 3.84375 11.6719 3.84375C11.224 3.84375 11 4.20312 11 4.92188V8.20312C11 8.93229 11.224 9.29688 11.6719 9.29688C12.1198 9.29688 12.3438 8.93229 12.3438 8.20312ZM23.5781 19.9375C23.5781 22.375 23.4427 24.1979 23.1719 25.4062C23.026 26.0208 22.724 26.5365 22.2656 26.9531C21.8073 27.3698 21.276 27.6094 20.6719 27.6719C18.7552 27.8906 15.8646 28 12 28C8.13542 28 5.24479 27.8906 3.32812 27.6719C2.72396 27.6094 2.1901 27.3698 1.72656 26.9531C1.26302 26.5365 0.963542 26.0208 0.828125 25.4062C0.557292 24.2396 0.421875 22.4167 0.421875 19.9375C0.421875 17.5 0.557292 15.6771 0.828125 14.4688C0.973958 13.8542 1.27604 13.3385 1.73438 12.9219C2.19271 12.5052 2.72917 12.2604 3.34375 12.1875C5.25 11.9792 8.13542 11.875 12 11.875C15.8646 11.875 18.7552 11.9792 20.6719 12.1875C21.276 12.2604 21.8099 12.5052 22.2734 12.9219C22.737 13.3385 23.0365 13.8542 23.1719 14.4688C23.4427 15.6354 23.5781 17.4583 23.5781 19.9375ZM7.98438 0H9.57812L7.6875 6.23438V10.4688H6.125V6.23438C5.97917 5.46354 5.66146 4.35938 5.17188 2.92188C4.78646 1.84896 4.44792 0.875 4.15625 0H5.8125L6.92188 4.10938L7.98438 0ZM13.7656 5.20312V7.9375C13.7656 8.78125 13.6198 9.39583 13.3281 9.78125C12.9323 10.3125 12.3802 10.5781 11.6719 10.5781C10.974 10.5781 10.4271 10.3125 10.0312 9.78125C9.73958 9.38542 9.59375 8.77083 9.59375 7.9375V5.20312C9.59375 4.36979 9.73958 3.76042 10.0312 3.375C10.4271 2.84375 10.974 2.57812 11.6719 2.57812C12.3802 2.57812 12.9323 2.84375 13.3281 3.375C13.6198 3.76042 13.7656 4.36979 13.7656 5.20312ZM19 2.67188V10.4688H17.5781V9.60938C17.026 10.2552 16.4896 10.5781 15.9688 10.5781C15.4896 10.5781 15.1823 10.3854 15.0469 10C14.9635 9.75 14.9219 9.35938 14.9219 8.82812V2.67188H16.3438V8.40625C16.3438 8.75 16.349 8.93229 16.3594 8.95312C16.3906 9.18229 16.5 9.29688 16.6875 9.29688C16.9688 9.29688 17.2656 9.07292 17.5781 8.625V2.67188H19Z" fill="black"/>
+                    </svg>                    
+                </a>
+            </li>
+        </ul>
     </footer>
 
-
-    <button class="scroll-bt"></button>
+    <!-- 탑버튼 누르면 헤더로 이동해야하는데 안돼요 -->
+    <div class="top-bt">
+        <a href="#header" title="화면 최상단으로 이동하기">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4467 37.7725L23.3808 25.8385H0V24.8385H23.5932L10.1245 13.5369L10.7673 12.7708L24.1611 24.0096V0H25.1611V24.0582L37.7729 11.4464L38.48 12.1535L25.795 24.8385H50V25.8385H26.3407L39.2877 36.7023L38.6449 37.4683L25.1611 26.1541V50H24.1611V26.4724L12.1538 38.4797L11.4467 37.7725Z" fill="black"/>
+            </svg>            
+        </a>
+    </div>
 </body>
 </html>
