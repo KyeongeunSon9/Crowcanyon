@@ -14,9 +14,9 @@ function makeSlider() {
 
     // 첫번째 마지막번째 슬라이드 복사해주기
     const cloneFirst = slideInner.firstElementChild.cloneNode(true)
-    const cloneLast = slideInner.lastElementChild.cloneNode(true)
+    // const cloneLast = slideInner.lastElementChild.cloneNode(true)
 
-    slideInner.insertBefore(cloneLast.slideInner.firstChild)
+    // slideInner.insertBefore(cloneLast, slideInner.firstChild)
     slideInner.appendChild(cloneFirst)
 
     const radioContainer = document.querySelector(`.radio-container`)
@@ -35,7 +35,7 @@ function makeSlider() {
         })
     }
 
-    radioContainer.firstChild.classList.add("selected")
+    radioContainer.firstElementChild.classList.add("selected")
 
 
     const 슬라이드너비 = slideContent.clientWidth
@@ -43,7 +43,7 @@ function makeSlider() {
     // 중복작동 안되도록 moveChecker가 true일때만 작동하기
     let moveChecker = true
 
-    let index = 1
+    let index = 0
     moveSlide(false)
 
     slideInner.addEventListener("click", () => {
@@ -58,7 +58,7 @@ function makeSlider() {
             setTimeout(()=>{
                 moveChecker = true
                 if (index === slideInner.childElementCount - 1) {
-                    index = 1
+                    index = 0
                     moveSlide(false)
                 }
             }, 1000)  
@@ -107,9 +107,9 @@ function makeSlider() {
 
 
 // 동영상 재생버튼 일시정지버튼
-var hz = document.getElementsByClassName(".hz")
-play = document.getElementsByClassName(".play")
-pause = document.getElementsByClassName(".pause")
+var hz = document.getElementsByClassName("hz")
+const play[0] = document.getElementsByClassName("play")
+const pause[0] = document.getElementsByClassName("pause")
 
 play.addEventListener('click', playVideo)
 pause.addEventListener('click', pauseVideo)
@@ -134,7 +134,7 @@ const listHide = document.querySelector(`.list-hide`)
 
 function toggleAccordion() {
     for (i=0; i < mainMenu.childElementCount; i++) {
-        mainMenu.addEventListener(click() => {
+        mainMenu.addEventListener(click, () => {
             listHide.classList.add("active")
         })
     
