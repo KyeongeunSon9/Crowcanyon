@@ -13,6 +13,15 @@
     --font-size-12: 12px
 }
 
+@font-face {
+    font-family: BODAR;
+    src: url(../font/BODAR.ttf);
+
+    font-family: AlternateGothic2 BT;
+    /* src: url(../font/AlternateGotNo2D.ttf); */
+    src: url(../font/Alternate\ Gothic\ No.2\ BT.ttf);
+}
+
 body {
     background-color: var(--background-color);
 }
@@ -27,6 +36,7 @@ header {
     display: flex;
     justify-content: center;
     position: fixed;
+    z-index: 2;
 }
 
 .header-nav {
@@ -41,8 +51,6 @@ header {
     background-color: var(--background-color);
     cursor: pointer;
 }
-/* 메뉴 백그라운드 컬러가 적용이 안 돼요 */
-/* 아래로 스크롤했을때 slide섹션에서 안 보여요 */
 
 .nav-hover:hover {
     background-color: var(--main-color-black);
@@ -323,11 +331,12 @@ header {
 
 .slide-inner {
     display: flex;
+    transition: 1s;
 }
 
-.slide {
-    width: 1278px;
-    height: 678px;
+.slide-content {
+    width: 1280px;
+    height: 680px;
 }
 
 .slide-img-1 {
@@ -345,20 +354,29 @@ header {
     background-size: cover;
 }
 
-.slide-radio {
+.slide-img-4 {
+    background-image: url(../img/cca_12_review.jpg);
+    background-size: cover;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
     position: absolute;
     right: 30px;
     bottom: 30px;
-}
-
-.slide-radio:first-child:active .slide-inner {
-    transform: translateX(+1280px);
 }
 
 .radio-bt {
     width: 50px;
     height: 10px;
     border: var(--border);
+    cursor: pointer;
+}
+
+.radio-bt .selected {
+    background-color: red;
 }
 
 .pd-frame {
@@ -484,6 +502,14 @@ header {
     width: 1280px;
     height: 650px;
 }
+
+/* .video-bt {
+    width: 0px;
+    height: 0px;
+    border-left: 60px solid #666666;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+} */
 
 footer {
     width: 1280px;
