@@ -22,14 +22,14 @@ function makeSlider() {
     const radioContainer = document.querySelector(`.radio-container`)
 
     // 슬라이드 갯수만큼 라디오 버튼 만들기
-    for(let i = 0; i < slideInner.childElementCount; i++) {
+    for(let i = 0; i < slideInner.childElementCount - 1; i++) {
         const radioBt = document.createElement("button")
         radioBt.classList.add("radio-bt")
         radioContainer.appendChild(radioBt)
 
         // 클릭했을때 인덱스에 맞게 버튼에 색 넣기
         radioBt.addEventListener('click', ()=> {
-            index = i + 1 
+            index = i
             moveSlide(true)
             selectedRadio()
         })
@@ -54,12 +54,12 @@ function makeSlider() {
 
             selectedRadio()
 
-            // 1초뒤에 마지막 인덱스에 도달했을때 인덱스 1로 바꿔주고 moveSlide실행
+            // 1초뒤에 마지막 인덱스에 도달했을때 인덱스 0으로 바꿔주고 moveSlide실행
             setTimeout(()=>{
                 moveChecker = true
                 if (index === slideInner.childElementCount - 1) {
                     index = 0
-                    moveSlide(false)
+                    moveSlide(0)
                 }
             }, 1000)  
         }
@@ -85,11 +85,11 @@ function makeSlider() {
         }
         // 인덱스에 따라서 버튼에 색 넣기
         if (index === slideInner.childElementCount - 1) {
-            radioContainer.children[0].classList.add("selceted")
+            radioContainer.children[i].classList.add("selceted")
         } else if (index === 0) {
-            radioContainer.children[slideInner.childElementCount - 3].classList.add("selceted")
+            radioContainer.children[slideInner.childElementCount - 4].classList.add("selceted")
         } else {
-            radioContainer.children[index - 1].classList.add("selceted")
+            radioContainer.children[index].classList.add("selceted")
         }
     }
 
@@ -107,9 +107,9 @@ function makeSlider() {
 
 
 // 동영상 재생버튼 일시정지버튼
-var hz = document.getElementsByClassName("hz")
-const play[0] = document.getElementsByClassName("play")
-const pause[0] = document.getElementsByClassName("pause")
+var hz = document.querySelector(`#hz`)
+const play = document.querySelector(`#play`)
+const pause = document.querySelector(`#pause`)
 
 play.addEventListener('click', playVideo)
 pause.addEventListener('click', pauseVideo)
@@ -126,27 +126,65 @@ function pauseVideo() {
 
 
 
-//헤더 메인메뉴 클릭했을때 펼쳐지게
-const mainMenu = document.querySelector(`.main-menu`)
-const listHide = document.querySelector(`.list-hide`)
+//메인메뉴 클릭했을때 서브메뉴 펼쳐지게
+const mainMenu = document.querySelectorAll(`.main-menu`)
+const subMenu = document.querySelectorAll(`.sub-menu`)
+
+// event listener
+mainMenu.forEach(function (el) {
+    el.addEventListener('click', toggleAccordion)
+});
+
+// function
+function toggleAccordion(el) {
+    var targetText = el.currentTarget.nextElementSibling.classList;
+    var targetAccIcon = el.currentTarget.children[0];
+    var target = el.currentTarget;
+    
+    if (targetText.contains('show')) {
+        targetText.remove('show');
+        targetAccIcon.classList.remove('anime');
+        target.classList.remove('accordionTitleActive');
+    } 
+    else {
+       accordionBtn.forEach(function (el) {
+          el.classList.remove('accordionTitleActive');
+          
+          allTexts.forEach(function (el) {
+             el.classList.remove('show');
+          })
+          
+          accIcon.forEach(function (el) {
+           el.classList.remove('anime');
+          }) 
+          
+       })
+       
+          targetText.add('show');
+          target.classList.add('accordionTitleActive');
+          targetAccIcon.classList.add('anime');
+    }  
+ }
+
+
+
+
+
+
+
+
+
+
 
 // listHide.childElementCount.offsetHeight
 
-function toggleAccordion() {
-    for (i=0; i < mainMenu.childElementCount; i++) {
-        mainMenu.addEventListener(click, () => {
-            listHide.classList.add("active")
-        })
+// function toggleAccordion() {
+//     for (i=0; i < mainMenu.childElementCount; i++) {
+//         mainMenu.addEventListener(click, () => {
+//             listHide.classList.add("active")
+//         })
     
-    }
+//     }
     
-}
-
-
-
-
-// if (listHide.style.maxHeight === 0) {
-//     listHide.style.maxHeight = null
-// } else {
-
 // }
+
