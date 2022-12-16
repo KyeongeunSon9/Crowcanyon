@@ -46,24 +46,24 @@ function makeSlider() {
     let index = 0
     moveSlide(false)
 
-    slideInner.addEventListener("click", () => {
-        if (moveChecker) {
-            moveChecker = false
-            index++
-            moveSlide(true)
+    // slideInner.addEventListener("click", () => {
+    //     if (moveChecker) {
+    //         moveChecker = false
+    //         index++
+    //         moveSlide(true)
 
-            selectedRadio()
+    //         selectedRadio()
 
-            // 1초뒤에 마지막 인덱스에 도달했을때 인덱스 0으로 바꿔주고 moveSlide실행
-            setTimeout(()=>{
-                moveChecker = true
-                if (index === slideInner.childElementCount - 1) {
-                    index = 0
-                    moveSlide(0)
-                }
-            }, 1000)  
-        }
-    });
+    //         // 1초뒤에 마지막 인덱스에 도달했을때 인덱스 0으로 바꿔주고 moveSlide실행
+    //         setTimeout(()=>{
+    //             moveChecker = true
+    //             if (index === slideInner.childElementCount - 1) {
+    //                 index = 0
+    //                 moveSlide(0)
+    //             }
+    //         }, 1000)  
+    //     }
+    // });
 
 
     // 반복해서 쓰이는 식 함수화하기
@@ -85,15 +85,13 @@ function makeSlider() {
         }
         // 인덱스에 따라서 버튼에 색 넣기
         if (index === slideInner.childElementCount - 1) {
-            radioContainer.children[i].classList.add("selceted")
-        } else if (index === 0) {
-            radioContainer.children[slideInner.childElementCount - 4].classList.add("selceted")
+            radioContainer.children[0].classList.add("selected")
         } else {
-            radioContainer.children[index].classList.add("selceted")
+            radioContainer.children[index].classList.add("selected")
         }
     }
 
-    
+
     // 4초마다 다음 슬라이드로 이동
     function fourSecondSlide() {
         setInterval ( () => {
@@ -106,7 +104,7 @@ function makeSlider() {
 
 
 
-// 동영상 재생버튼 일시정지버튼
+// 동영상 재생과 일시정지 버튼
 var hz = document.querySelector(`#hz`)
 const play = document.querySelector(`#play`)
 const pause = document.querySelector(`#pause`)
@@ -122,49 +120,93 @@ function pauseVideo() {
     hz.pause(); 
 }
 
+// 재생 클릭하면 -> 일시정지 이미지로 바꾸기
+function toggleicon() {
+    if (playVideo) {
+        document.getElementById(`#play-icon`).src = "./img/pause-icon.png"
+    } else {
+        document.getElementById(`#play-icon`).src = "./img/play-icon.png"
+    }
+}
 
 
 
 
-//메인메뉴 클릭했을때 서브메뉴 펼쳐지게
-const mainMenu = document.querySelectorAll(`.main-menu`)
-const subMenu = document.querySelectorAll(`.sub-menu`)
+// main-menu를 전부 가져온다 getElementsByClassName
+// 반복문 이용해서 가져온 main-menu들한테 이벤트리스너 넣어준다
+// <이벤트리스너 내용>
+// 모든 main-menu의 height 50px로 만들어주고
+// 클릭된 자신은 자신(50px) + 자식갯수(50px * 자식갯수) 만큼 크기로 설정되게
+// calc(50px + 50px * 4);    .active
 
-// event listener
-mainMenu.forEach(function (el) {
-    el.addEventListener('click', toggleAccordion)
-});
 
-// function
-function toggleAccordion(el) {
-    var targetText = el.currentTarget.nextElementSibling.classList;
-    var targetAccIcon = el.currentTarget.children[0];
-    var target = el.currentTarget;
+const mainMenu = document.getElementsByClassName(`main-menu`);
+const subMenu = document.getElementsByClassName(`sub-menu`);
+
+for(let i = 0; i < mainMenu.length; i++) {
+    // offsetHeight - padding, border 값을 포함한 컨텐츠의 높이를 가져온다. (margin은 포함 X)
+    const menuHeight = mainMenu.offsetHeight;
+
+    mainMenu.addEventListener(click, () => {
+        subMenu.style.height = "50px";
+        menuHeight + subMenu.childElementCount(menuHeight * subMenu.childElementCount);
+        if () {
+            mainMenu.classList.add("active")
+        } else {
+            mainMenu.classList.remove("active")
+        }
+    })
+};
+
+
+
+
+
+
+
+
+
+
+
+// //메인메뉴 클릭했을때 서브메뉴 펼쳐지게
+// const mainMenu = document.querySelectorAll(`.main-menu`)
+// const subMenu = document.querySelectorAll(`.sub-menu`)
+
+// // event listener
+// mainMenu.forEach(function (el) {
+//     el.addEventListener('click', toggleAccordion)
+// });
+
+// // function
+// function toggleAccordion(el) {
+//     var targetText = el.currentTarget.nextElementSibling.classList;
+//     var targetAccIcon = el.currentTarget.children[0];
+//     var target = el.currentTarget;
     
-    if (targetText.contains('show')) {
-        targetText.remove('show');
-        targetAccIcon.classList.remove('anime');
-        target.classList.remove('accordionTitleActive');
-    } 
-    else {
-       accordionBtn.forEach(function (el) {
-          el.classList.remove('accordionTitleActive');
+//     if (targetText.contains('show')) {
+//         targetText.remove('show');
+//         targetAccIcon.classList.remove('anime');
+//         target.classList.remove('accordionTitleActive');
+//     } 
+//     else {
+//        accordionBtn.forEach(function (el) {
+//           el.classList.remove('accordionTitleActive');
           
-          allTexts.forEach(function (el) {
-             el.classList.remove('show');
-          })
+//           allTexts.forEach(function (el) {
+//              el.classList.remove('show');
+//           })
           
-          accIcon.forEach(function (el) {
-           el.classList.remove('anime');
-          }) 
+//           accIcon.forEach(function (el) {
+//            el.classList.remove('anime');
+//           }) 
           
-       })
+//        })
        
-          targetText.add('show');
-          target.classList.add('accordionTitleActive');
-          targetAccIcon.classList.add('anime');
-    }  
- }
+//           targetText.add('show');
+//           target.classList.add('accordionTitleActive');
+//           targetAccIcon.classList.add('anime');
+//     }  
+//  }
 
 
 

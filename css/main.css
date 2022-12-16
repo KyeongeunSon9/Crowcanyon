@@ -17,10 +17,14 @@
 @font-face {
     font-family: BODAR;
     src: url(../font/BODAR.ttf);
+}
 
+@font-face {
     font-family: AlternateGothic2 BT;
     src: url(../font/Alternate\ Gothic\ No.2\ BT.ttf);
+}
 
+@font-face {
     font-family: SpoqaHanSansNeo;
     src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
@@ -84,9 +88,20 @@ header {
     border: var(--border);
     color: var(--main-color-black);
     font-size: var(--font-size-20);
-    overflow: hidden;
+    /* overflow: hidden; */
     display: none;
     transition: 0.7s;
+}
+
+/* .sub-menu li {
+    width: 220px;
+    height: 50px;
+} */
+
+.sub-menu a {
+    font-family: var(--font-family-AlternateGothic);
+    font-size: var(--font-size-20);
+    color: var(--main-color-black);
 }
 
 .header-logo {
@@ -109,6 +124,7 @@ header {
     height: 50px;
     background-color: var(--background-color);
     border: var(--border);
+    box-sizing: border-box;
     color: var(--main-color-black);
     font-size: var(--font-size-20);
     transition: 0.7s;
@@ -117,10 +133,6 @@ header {
 .account-list a:hover, .main-menu:hover {
     background-color: var(--main-color-black);
     color: var(--font-color-white);
-}
-
-.main-menu:active .list-hide {
-    overflow: visible;
 }
 
 .cr-typograpy-wrapper {
@@ -496,15 +508,16 @@ header {
 }
 
 .pf-content img {
-    width: 180px;
+    width: 130px;
     height: auto;
 }
 
 .pf-text {
-    font-size: var(--font-size-20);
-    font-family: var(--font-family-AlternateGothic);
+    font-size: var(--font-size-14);
+    font-weight: 900;
+    font-family: var(--font-family-SpoqaHanSansNeo);
     text-align: center;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .magazine-content-wrapper ul {

@@ -170,16 +170,24 @@
                         
                         <!-- 각 슬라이드 컨텐츠들 -->
                         <li>
-                            <figure class="slide-content slide-img-1"></figure>
+                            <a href="#">
+                                <figure class="slide-content slide-img-1"></figure>
+                            </a>
                         </li>
                         <li>
-                            <figure class="slide-content slide-img-2"></figure>
+                            <a href="#">
+                                <figure class="slide-content slide-img-2"></figure>
+                            </a>
                         </li>
                         <li>
-                            <figure class="slide-content slide-img-3"></figure>
+                            <a href="#">
+                                <figure class="slide-content slide-img-3"></figure>
+                            </a>
                         </li>
                         <li>
-                            <figure class="slide-content slide-img-4"></figure>
+                            <a href="#">
+                                <figure class="slide-content slide-img-4"></figure>
+                            </a>
                         </li>
                     </ul>
             </div>
@@ -360,37 +368,37 @@
             <ul>
                 <li class="pf-content">
                     <figure>
-                        <img src="img/durable.png" alt="durable">
+                        <img src="img/durable 복사.png" alt="durable">
                     </figure>
                     <p class="pf-text">Durable</p>
                 </li>
                 <li class="pf-content">
                     <figure>
-                        <img src="img/lightweight_shatterproof.png" alt="lightweight_shatterproof">
+                        <img src="img/lightweight_shatterproof 복사.png" alt="lightweight_shatterproof">
                     </figure>
                     <p class="pf-text">Lightweight & Shatterproof</p>
                 </li>
                 <li class="pf-content">
                     <figure>
-                        <img src="img/for_kids.png" alt="for_kids">
+                        <img src="img/for_kids 복사.png" alt="for_kids">
                     </figure>
                     <p class="pf-text">For kids, poolside & Outdoors</p>
                 </li>
                 <li class="pf-content">
                     <figure>
-                        <img src="img/handmade.png" alt="handmade">
+                        <img src="img/handmade 복사.png" alt="handmade">
                     </figure>
                     <p class="pf-text">Handmade</p>
                 </li>
                 <li class="pf-content">
                     <figure>
-                        <img src="img/safe_to_use.png" alt="safe_to_use">
+                        <img src="img/safe_to_use 복사.png" alt="safe_to_use">
                     </figure>
                     <p class="pf-text">Safe to use</p>
                 </li>
                 <li class="pf-content">
                     <figure>
-                        <img src="img/food_safe.png" alt="food_safe">
+                        <img src="img/food_safe 복사.png" alt="food_safe">
                     </figure>
                     <p class="pf-text">Food safe</p>
                 </li>
@@ -413,25 +421,17 @@
                 <li class="magazine-content">
                     <a href="#">
                         <figure>
-                            <img src="img/0444428a189a3e9e9001b7985cbc8e68.jpg" alt="">
+                            <img src="img/KakaoTalk_20221214_161809568.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">오렌지마블, 그린마블 굿즈 오픈</h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure>
+                            <img src="img/318019702_145510304926552_639629785247709033_n.jpg" alt="">
                         </figure>
                         <h5 class="promotion-title">Happy Holiday</h5>
-                    </a>
-                </li>
-                <li class="magazine-content">
-                    <a href="#">
-                        <figure>
-                            <img src="img/7fe267a576314af29683fb4d4c76084a.jpg" alt="">
-                        </figure>
-                        <h5 class="promotion-title">1차 신제품 출시 안내</h5>
-                    </a>
-                </li>
-                <li class="magazine-content">
-                    <a href="#">
-                        <figure>
-                            <img src="img/EAB980EC9888EBA6BC2.jpeg" alt="">
-                        </figure>
-                        <h5 class="promotion-title">11월 BEST REVIEW</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
@@ -445,17 +445,25 @@
                 <li class="magazine-content">
                     <a href="#">
                         <figure>
-                            <img src="img/KakaoTalk_20221111_132902906_01.jpg" alt="">
+                            <img src="img/296317239_165924805965326_8982061920604916662_n.jpg" alt="">
                         </figure>
-                        <h5 class="promotion-title">망원 쇼룸 홀리데이기념 이벤트</h5>
+                        <h5 class="promotion-title">크로우캐년 제주 팝업스토어</h5>
                     </a>
                 </li>
                 <li class="magazine-content">
                     <a href="#">
                         <figure>
-                            <img src="img/296317239_165924805965326_8982061920604916662_n.jpg" alt="">
+                            <img src="img/b11d160d790cc7358ee9c3ac87d8057c.jpg" alt="">
                         </figure>
-                        <h5 class="promotion-title">크로우캐년 제주 팝업스토어</h5>
+                        <h5 class="promotion-title">크로우캐년홈 압구정 쇼룸 오픈</h5>
+                    </a>
+                </li>
+                <li class="magazine-content">
+                    <a href="#">
+                        <figure>
+                            <img src="img/dd931e70527517c33decaae585e30446.jpg" alt="">
+                        </figure>
+                        <h5 class="promotion-title">업사이클링 프로젝트 #브링백캠페인</h5>
                     </a>
                 </li>
             </ul>
@@ -475,15 +483,17 @@
         <div class="video-wrapper">
             <video id="hz" src="video/Camping Food With CrowCanyon.mp4"></video>
             <div class="video-bt">
-                <button id="play" type="button">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button onclick="toggleicon()" id="play" type="button">
+                    <!-- <svg id="play-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 0C25.3043 0 30.3914 2.10714 34.1421 5.85786C37.8929 9.60859 40 14.6957 40 20C40 25.3043 37.8929 30.3914 34.1421 34.1421C30.3914 37.8929 25.3043 40 20 40C14.6957 40 9.60859 37.8929 5.85786 34.1421C2.10714 30.3914 0 25.3043 0 20C0 14.6957 2.10714 9.60859 5.85786 5.85786C9.60859 2.10714 14.6957 0 20 0V0ZM20 37.1429C24.5466 37.1429 28.9069 35.3367 32.1218 32.1218C35.3367 28.9069 37.1429 24.5466 37.1429 20C37.1429 15.4534 35.3367 11.0931 32.1218 7.87817C28.9069 4.66326 24.5466 2.85714 20 2.85714C15.4534 2.85714 11.0931 4.66326 7.87817 7.87817C4.66326 11.0931 2.85714 15.4534 2.85714 20C2.85714 24.5466 4.66326 28.9069 7.87817 32.1218C11.0931 35.3367 15.4534 37.1429 20 37.1429V37.1429ZM17.8571 26.0886L26.9914 20L17.8571 13.9114V26.0886ZM18.3314 10.7914L29.4686 18.2171C29.7621 18.4128 30.0027 18.678 30.1691 18.989C30.3355 19.3 30.4226 19.6473 30.4226 20C30.4226 20.3527 30.3355 20.7 30.1691 21.011C30.0027 21.3221 29.7621 21.5872 29.4686 21.7829L18.3314 29.2086C18.0087 29.4237 17.6337 29.5472 17.2463 29.5659C16.8589 29.5846 16.4737 29.4979 16.1318 29.3149C15.7898 29.1319 15.5039 28.8595 15.3046 28.5268C15.1053 28.1941 15 27.8136 15 27.4257V12.5714C15 12.1836 15.1053 11.803 15.3046 11.4703C15.5039 11.1376 15.7898 10.8653 16.1318 10.6823C16.4737 10.4993 16.8589 10.4125 17.2463 10.4312C17.6337 10.4499 18.0087 10.5735 18.3314 10.7886V10.7914Z" fill="black"/>
-                    </svg>           
+                    </svg>            -->
+                    <img id="play-icon" src="img/play-icon.png" alt="player-icon">
                 </button>
                 <button id="pause" type="button">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg id="pause-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 0C25.3043 0 30.3914 2.10714 34.1421 5.85786C37.8929 9.60859 40 14.6957 40 20C40 25.3043 37.8929 30.3914 34.1421 34.1421C30.3914 37.8929 25.3043 40 20 40C14.6957 40 9.60859 37.8929 5.85786 34.1421C2.10714 30.3914 0 25.3043 0 20C0 14.6957 2.10714 9.60859 5.85786 5.85786C9.60859 2.10714 14.6957 0 20 0V0ZM20 37.1429C24.5466 37.1429 28.9069 35.3367 32.1218 32.1218C35.3367 28.9069 37.1429 24.5466 37.1429 20C37.1429 15.4534 35.3367 11.0931 32.1218 7.87817C28.9069 4.66326 24.5466 2.85714 20 2.85714C15.4534 2.85714 11.0931 4.66326 7.87817 7.87817C4.66326 11.0931 2.85714 15.4534 2.85714 20C2.85714 24.5466 4.66326 28.9069 7.87817 32.1218C11.0931 35.3367 15.4534 37.1429 20 37.1429V37.1429ZM15.7143 12.8571C16.6667 12.8571 17.1429 13.3333 17.1429 14.2857V25.7143C17.1429 26.6667 16.6667 27.1429 15.7143 27.1429C14.7619 27.1429 14.2857 26.6667 14.2857 25.7143V14.2857C14.2857 13.3333 14.7619 12.8571 15.7143 12.8571ZM24.2857 12.8571C25.2381 12.8571 25.7143 13.3333 25.7143 14.2857V25.7143C25.7143 26.6667 25.2381 27.1429 24.2857 27.1429C23.3333 27.1429 22.8571 26.6667 22.8571 25.7143V14.2857C22.8571 13.3333 23.3333 12.8571 24.2857 12.8571Z" fill="black"/>
-                    </svg>
+                    </svg> -->
+                    <!-- <img id="pause-icon" src="img/pause-icon.png" alt="pause-icon"> -->
                 </button>
                 <a class="video-link" href="https://youtu.be/PMwAluxj92c">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
