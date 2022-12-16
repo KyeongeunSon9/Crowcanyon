@@ -120,7 +120,7 @@ function pauseVideo() {
     hz.pause(); 
 }
 
-// 재생 클릭하면 -> 일시정지 이미지로 바꾸기
+
 function toggleicon() {
     if (playVideo) {
         document.getElementById(`#play-icon`).src = "./img/pause-icon.png"
@@ -137,96 +137,23 @@ function toggleicon() {
 // <이벤트리스너 내용>
 // 모든 main-menu의 height 50px로 만들어주고
 // 클릭된 자신은 자신(50px) + 자식갯수(50px * 자식갯수) 만큼 크기로 설정되게
-// calc(50px + 50px * 4);    .active
+
+
+// mainMenu를 누르면 mainMenu의 height가 커져야한다
+// 다른 mainMenu가 멀리있다면 그 녀석은 50px만큼 줄어들어야 한다 - 먼저 초기화 해준다
+// 그 mainMenu가 갖고있는 자식요소 * 50px 한 만큼 커진다
 
 
 const mainMenu = document.getElementsByClassName(`main-menu`);
-const subMenu = document.getElementsByClassName(`sub-menu`);
 
-for(let i = 0; i < mainMenu.length; i++) {
-    // offsetHeight - padding, border 값을 포함한 컨텐츠의 높이를 가져온다. (margin은 포함 X)
-    const menuHeight = mainMenu.offsetHeight;
-
-    mainMenu.addEventListener(click, () => {
-        subMenu.style.height = "50px";
-        menuHeight + subMenu.childElementCount(menuHeight * subMenu.childElementCount);
-        if () {
-            mainMenu.classList.add("active")
-        } else {
-            mainMenu.classList.remove("active")
+// mainMenu[i]번째에 이벤트 리스너 들어가야한다
+for (let i = 0; i < mainMenu.length; i++) {
+    mainMenu[i].addEventListener('click', () => {
+        
+        for(let j = 0; j < mainMenu.length; j++){
+            mainMenu[j].style.height = '50px'
         }
+
+        mainMenu[i].style.height = `${mainMenu[i].firstElementChild.childElementCount * 50}px`
     })
-};
-
-
-
-
-
-
-
-
-
-
-
-// //메인메뉴 클릭했을때 서브메뉴 펼쳐지게
-// const mainMenu = document.querySelectorAll(`.main-menu`)
-// const subMenu = document.querySelectorAll(`.sub-menu`)
-
-// // event listener
-// mainMenu.forEach(function (el) {
-//     el.addEventListener('click', toggleAccordion)
-// });
-
-// // function
-// function toggleAccordion(el) {
-//     var targetText = el.currentTarget.nextElementSibling.classList;
-//     var targetAccIcon = el.currentTarget.children[0];
-//     var target = el.currentTarget;
-    
-//     if (targetText.contains('show')) {
-//         targetText.remove('show');
-//         targetAccIcon.classList.remove('anime');
-//         target.classList.remove('accordionTitleActive');
-//     } 
-//     else {
-//        accordionBtn.forEach(function (el) {
-//           el.classList.remove('accordionTitleActive');
-          
-//           allTexts.forEach(function (el) {
-//              el.classList.remove('show');
-//           })
-          
-//           accIcon.forEach(function (el) {
-//            el.classList.remove('anime');
-//           }) 
-          
-//        })
-       
-//           targetText.add('show');
-//           target.classList.add('accordionTitleActive');
-//           targetAccIcon.classList.add('anime');
-//     }  
-//  }
-
-
-
-
-
-
-
-
-
-
-
-// listHide.childElementCount.offsetHeight
-
-// function toggleAccordion() {
-//     for (i=0; i < mainMenu.childElementCount; i++) {
-//         mainMenu.addEventListener(click, () => {
-//             listHide.classList.add("active")
-//         })
-    
-//     }
-    
-// }
-
+}
