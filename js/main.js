@@ -182,6 +182,11 @@ for (let i = 0; i < pfContent.length; i++) {
 }
 
 
+const search = document.getElementById('search');
+
+search.innerText = "Enter keywords to search.";
+
+
 
 
 
