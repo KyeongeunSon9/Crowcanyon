@@ -4,8 +4,6 @@
 // 버튼을 누르면 해당버튼에 맞는 인덱스로 교체
 // ex 3번 버튼을 누르면 -> index = 3 ; 슬라이드위치이동();
 
-
-
 makeSlider()
 
 function makeSlider() {
@@ -95,10 +93,11 @@ function makeSlider() {
     // 4초마다 다음 슬라이드로 이동
     function fourSecondSlide() {
         setInterval ( () => {
-            
+        
         }, 4000)
     }
 }
+
 
 
 
@@ -113,21 +112,18 @@ play.addEventListener('click', playVideo)
 pause.addEventListener('click', pauseVideo)
 
 function playVideo() { 
-    hz.play(); 
+    hz.play();
+    play.style.display = 'none'
+    pause.style.display = 'block'
 } 
 
 function pauseVideo() { 
     hz.pause(); 
+    pause.style.display = 'none'
+    play.style.display = 'block'
 }
 
 
-function toggleicon() {
-    if (playVideo) {
-        document.getElementById(`#play-icon`).src = "./img/pause-icon.png"
-    } else {
-        document.getElementById(`#play-icon`).src = "./img/play-icon.png"
-    }
-}
 
 
 
@@ -138,9 +134,8 @@ function toggleicon() {
 // 모든 main-menu의 height 50px로 만들어주고
 // 클릭된 자신은 자신(50px) + 자식갯수(50px * 자식갯수) 만큼 크기로 설정되게
 
-
 // mainMenu를 누르면 mainMenu의 height가 커져야한다
-// 다른 mainMenu가 멀리있다면 그 녀석은 50px만큼 줄어들어야 한다 - 먼저 초기화 해준다
+// 다른 mainMenu가 열려있다면 그 녀석은 50px만큼 줄어들어야 한다
 // 그 mainMenu가 갖고있는 자식요소 * 50px 한 만큼 커진다
 
 
@@ -148,12 +143,62 @@ const mainMenu = document.getElementsByClassName(`main-menu`);
 
 // mainMenu[i]번째에 이벤트 리스너 들어가야한다
 for (let i = 0; i < mainMenu.length; i++) {
-    mainMenu[i].addEventListener('click', () => {
-        
-        for(let j = 0; j < mainMenu.length; j++){
-            mainMenu[j].style.height = '50px'
-        }
 
+    mainMenu[i].addEventListener('click', () => {
+
+        mainMenu[i].classList.add("active")
+
+        for(let j = 0; j < mainMenu.length; j++){
+            mainMenu[j].style.height = '50px' //먼저 height를 50px로 줄여준다 - 초기화
+
+            mainMenu[j].addEventListener('click', () => {
+                mainMenu[j].style.height = '50px'
+            })
+        }
         mainMenu[i].style.height = `${mainMenu[i].firstElementChild.childElementCount * 50}px`
     })
+}
+
+
+
+
+
+
+
+// PF 라인 이미지 스크롤 애니메이션
+
+const pfContent = document.getElementsByClassName("pf-content")
+
+for (let i = 0; i < pfContent.length; i++) {
+    
+    window.addEventListener("scroll", () => {
+
+        if (pfContent[i].getBoundingClientRect().top - (window.innerHeight / 3) * 2 < 0) {
+            pfContent[i].classList.remove("pf-animation")
+        }
+
+    })
+
+}
+
+
+
+
+
+
+
+
+// 이미지 스크롤 애니메이션
+const pdContent = document.getElementsByClassName("img-ani")
+
+for (let i = 0; i < pdContent.length; i++) {
+    
+    window.addEventListener("scroll", () => {
+
+        if (pdContent[i].getBoundingClientRect().top - (window.innerHeight / 3) * 2 < 0) {
+            pdContent[i].classList.remove("rise")
+        }
+
+    })
+
 }

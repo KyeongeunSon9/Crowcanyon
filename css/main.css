@@ -73,6 +73,11 @@ header {
     display: none;
 }
 
+.search-hover:hover #search {
+    display: block;
+    font-size: var(--font-size-14);
+}
+
 .pc-hide {
     display: none;
 }
@@ -103,20 +108,20 @@ header {
     transition: 0.7s;
 }
 
-.sub-menu li:first-child {
-    border-top: 2px solid #222;
-}
-
 .sub-menu li {
     border-top: var(--border);
 }
-
 
 .sub-menu a {
     font-family: var(--font-family-AlternateGothic);
     font-size: var(--font-size-20);
     color: var(--main-color-black);
     transition: 0.7s;
+}
+
+.active {
+    background-color: var(--main-color-black);
+    color: var(--font-color-white);
 }
 
 .header-logo {
@@ -169,13 +174,14 @@ header {
     font-size: 190px;
     font-family: var(--font-family-BODAR);
     text-align: center;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-name: fadeIn;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0.15;
+        opacity: 0;
     }
     to {
         opacity: 1;
@@ -269,23 +275,27 @@ header {
 
 .story-img {
     width: 480px;
-    height: 700px;
+    height: 699px;
     background-image: url(../img/main.jpg);
-    background-size: 480px 700px;
-    box-sizing: border-box;
-    border-bottom: var(--border);
-    animation: rise 1.3s;
+    background-size: 480px 699px;
+    animation: rise 1.6s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes rise {
     from {
-        opacity: 0.15;
-        transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.rise {
+    transform: translateY(40px);
+    opacity: 0;
 }
 
 
@@ -296,12 +306,15 @@ header {
 
 .membership-img {
     width: 480px;
-    height: 700px;
+    height: 699px;
     background-image: url(../img/membership.png);
-    background-size: 480px 700px cover;
+    background-size: 480px 699px cover;
     background-position: 85%;
-    border-bottom: var(--border);
-    box-sizing: border-box;
+}
+
+.img-ani{
+    transition: 2s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .home-styling-wrapper-left {
@@ -521,6 +534,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 2s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .pf-content figure {
@@ -531,6 +546,13 @@ header {
 .pf-content img {
     width: 130px;
     height: auto;
+    transition: 0.5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pf-content img:hover {
+    width: 150px;
+    height: auto;
 }
 
 .pf-text {
@@ -539,6 +561,11 @@ header {
     font-family: var(--font-family-SpoqaHanSansNeo);
     text-align: center;
     margin-top: 18px;
+}
+
+.pf-animation {
+    transform: translateX(300px);
+    opacity: 0;
 }
 
 .magazine-content-wrapper ul {
@@ -771,16 +798,16 @@ footer {
     }
 
     .story-img {
-        width: 280px;
-        height: 500px;
-        background-size: auto 500px;
+        width: 278px;
+        height: 499px;
+        background-size: auto 499px;
         background-position: 50%;
     }
     
     .membership-img {
-        width: 280px;
-        height: 500px;
-        background-size: auto 500px;
+        width: 278px;
+        height: 499px;
+        background-size: auto 499px;
         background-position: 100%;
     }
 
