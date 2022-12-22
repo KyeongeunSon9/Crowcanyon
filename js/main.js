@@ -146,16 +146,21 @@ for (let i = 0; i < mainMenu.length; i++) {
 
     mainMenu[i].addEventListener('click', () => {
 
-        mainMenu[i].classList.add("active")
+        if (mainMenu[i].classList.contains('active')) {
+            mainMenu[i].style.height = '50px' //먼저 height를 50px로 줄여준다 - 초기화
+            mainMenu[i].classList.remove('active');
+        } else {
+            for(let j = 0; j < mainMenu.length; j++){
+                mainMenu[j].style.height = '50px' //먼저 height를 50px로 줄여준다 - 초기화
+                mainMenu[j].classList.remove('active');
+            }
+            mainMenu[i].classList.add('active');
+            try {
+                mainMenu[i].style.height = `${mainMenu[i].firstElementChild.childElementCount * 50}px`
+            } catch (error) {
 
-        for(let j = 0; j < mainMenu.length; j++){
-            mainMenu[j].style.height = '50px' //먼저 height를 50px로 줄여준다 - 초기화
-
-            mainMenu[j].addEventListener('click', () => {
-                mainMenu[j].style.height = '50px'
-            })
+            }
         }
-        mainMenu[i].style.height = `${mainMenu[i].firstElementChild.childElementCount * 50}px`
     })
 }
 
@@ -180,13 +185,6 @@ for (let i = 0; i < pfContent.length; i++) {
     })
 
 }
-
-
-const search = document.getElementById('search');
-
-search.innerText = "Enter keywords to search.";
-
-
 
 
 
