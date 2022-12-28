@@ -156,7 +156,14 @@ for (let i = 0; i < mainMenu.length; i++) {
             }
             mainMenu[i].classList.add('active');
             try {
-                mainMenu[i].style.height = `${mainMenu[i].firstElementChild.childElementCount * 50}px`
+                // if(firstElementChild === 0) {
+                //     mainMenu[i].style.height = `50px`;
+                // } else {
+                //     mainMenu[i].style.height = `${mainMenu[i].firstElementChild.childElementCount * 50}px`
+                // }
+                const menuChildCount = mainMenu[i].firstElementChild.childElementCount;
+                mainMenu[i].style.height = `${menuChildCount === 0 ? 50 : menuChildCount * 50}px`
+                // 삼항연산자
             } catch (error) {
 
             }
